@@ -12,6 +12,8 @@ class App:
         self._dispalying_surf = pygame.display.set_mode(self.size, pygame.HWSURFACE)
         self._dispalying_surf.fill((255, 255, 255))
         self._running = True
+        pygame.font.init()
+        self._font = pygame.font.SysFont('Comic Sans MS', 30)
 
     def on_event(self, event):
         if event.type == pygame.QUIT:
@@ -21,6 +23,9 @@ class App:
         pass
 
     def on_render(self):
+        text = self._font.render('ULTIMATE SUDOKU', False, (0, 0, 0))
+        textsurface = text.get_rect(center=(self.weight/2,self.height/2))
+        self._dispalying_surf.blit(text, textsurface)
         pass
 
     def on_cleanup(self):
