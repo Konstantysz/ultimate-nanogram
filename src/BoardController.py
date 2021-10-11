@@ -23,4 +23,6 @@ class BoardController:
         return
 
     def calculate_info_numbers(self):
+        # self.calculate_info_numbers_horizontal()
+        self.calculate_info_numbers_vertical()
         return
