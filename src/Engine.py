@@ -9,12 +9,12 @@ class Engine:
         self._gameController = GameController(self._difficulty)
          
     # default constructor
-    def Play(self):
+    def play(self):
         print("Play!")
          
     # default constructor
-    def Stop(self):
+    def stop(self):
         print("Stop!")
 
-    def NewGame(self):
+    def new_game(self):
         print("NewGame!")

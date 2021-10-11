@@ -3,6 +3,7 @@ from pygame.locals import *
 
 from src.Engine import Engine
 
+
 class App:
     def __init__(self):
         self._running = True
@@ -42,8 +43,7 @@ class App:
             pygame.display.update()
         self.on_cleanup()
 
+
 if __name__ == "__main__":
     theApp = App()
     theApp.on_execute()
-        
-            
