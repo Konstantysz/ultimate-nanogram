@@ -7,9 +7,16 @@ class BoardController:
     def __init__(self, boardSize):
         print("Board {}x{} created!".format(boardSize.value, boardSize.value))
 
-        self._board = np.array([[Cell(True), Cell(True), Cell(True), Cell(True), Cell(True)], [Cell(False), Cell(False), Cell(False),
-                Cell(False), Cell(False)], [Cell(True), Cell(True), Cell(True), Cell(True), Cell(True)], [Cell(False), Cell(False), Cell(False),
-                Cell(False), Cell(False)], [Cell(True), Cell(True), Cell(True), Cell(True), Cell(True)]])
+        self._horizontalNumbers = np.zeros((boardSize.value, boardSize.value), dtype=int)
+        self._verticalNumbers = np.zeros((boardSize.value, boardSize.value), dtype=int)
+
+        self._board = np.array([
+            [Cell(True), Cell(True), Cell(True), Cell(True), Cell(True)], 
+            [Cell(False), Cell(False), Cell(False), Cell(False), Cell(False)], 
+            [Cell(True), Cell(True), Cell(True), Cell(True), Cell(True)], 
+            [Cell(False), Cell(False), Cell(False), Cell(False), Cell(False)], 
+            [Cell(True), Cell(True), Cell(True), Cell(True), Cell(True)]
+        ])
 
     def import_board_image(self):
         # Bogdan algorithm to import image from BOARDFILEPATH
