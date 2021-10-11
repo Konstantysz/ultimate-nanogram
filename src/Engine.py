@@ -5,7 +5,7 @@ class Engine:
  
     # default constructor
     def __init__(self):
-        self._difficulty = Difficulty.NORMAL
+        self._difficulty = Difficulty.EASY
         self._gameController = GameController(self._difficulty)
          
     # default constructor
