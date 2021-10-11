@@ -7,8 +7,8 @@ class BoardController:
     def __init__(self, boardSize):
         print("Board {}x{} created!".format(boardSize.value, boardSize.value))
 
-        self._horizontalNumbers = np.zeros((boardSize.value, boardSize.value), dtype=int)
-        self._verticalNumbers = np.zeros((boardSize.value, boardSize.value), dtype=int)
+        self._horizontalNumbers = np.array([])
+        self._verticalNumbers = np.array([])
 
         self._board = np.array([
             [Cell(True), Cell(True), Cell(True), Cell(True), Cell(True)], 
