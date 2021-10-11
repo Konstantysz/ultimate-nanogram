@@ -26,3 +26,23 @@ class BoardController:
         # self.calculate_info_numbers_horizontal()
         self.calculate_info_numbers_vertical()
         return
+
+    def calculate_info_numbers_vertical(self):
+        res = []
+        for i in range(self._board.shape[1]):
+            nums = []
+            prev_val = False
+            num = 0
+            for j in range(self._board.shape[0]):
+                if (self._board[j][i].get_value()):
+                    num += 1
+                    prev_val = True
+                    if (j == self._board.shape[0] - 1):
+                        nums.append(num)
+                else:
+                    nums.append(num)
+                    prev_val = False
+                    num = 0
+            res.append(nums)
+            
+        self._verticalNumbers = np.array(res)
