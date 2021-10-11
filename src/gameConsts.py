@@ -5,3 +5,8 @@ class Difficulty(Enum):
     NORMAL = 10
     HARD = 15
     TURBO = 30
+
+class InputMode(Enum):
+    IMAGECELL = 0
+    EMPTYSQUARE = 1
+    HINT = 2
