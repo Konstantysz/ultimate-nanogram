@@ -10,3 +10,5 @@ class InputMode(Enum):
     IMAGECELL = 0
     EMPTYSQUARE = 1
     HINT = 2
+
+LIVESNUMBER = 3
