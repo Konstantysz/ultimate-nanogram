@@ -8,3 +8,4 @@ class GameController:
         self._lives = LIVESNUMBER
         self._input_mode = InputMode.IMAGECELL
         self._gameController = BoardController(boardSize)
+        self._gameController.calculate_info_numbers()
