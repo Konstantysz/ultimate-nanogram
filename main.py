@@ -1,6 +1,8 @@
 import pygame
 from pygame.locals import *
 
+from src.Engine import Engine
+
 class App:
     def __init__(self):
         self._running = True
@@ -12,6 +14,7 @@ class App:
         self._dispalying_surf = pygame.display.set_mode(self.size, pygame.HWSURFACE)
         self._dispalying_surf.fill((255, 255, 255))
         self._running = True
+        self._engine = Engine()
         pygame.font.init()
 
     def on_event(self, event):
