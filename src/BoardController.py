@@ -11,8 +11,8 @@ class BoardController:
         self._verticalNumbers = np.array([])
 
         self._board = np.array([
-            [Cell(True), Cell(False), Cell(True), Cell(True), Cell(True)], 
-            [Cell(False), Cell(False), Cell(False), Cell(False), Cell(False)], 
+            [Cell(True), Cell(False), Cell(True), Cell(True), Cell(False)], 
+            [Cell(False), Cell(False), Cell(False), Cell(False), Cell(True)], 
             [Cell(True), Cell(False), Cell(True), Cell(True), Cell(True)], 
             [Cell(False), Cell(False), Cell(True), Cell(False), Cell(False)], 
             [Cell(True), Cell(False), Cell(True), Cell(True), Cell(True)]
@@ -45,6 +45,5 @@ class BoardController:
             if num > 0:
                 nums.append(num)
             res.append(nums)
-        print(res)
             
         self._verticalNumbers = np.array(res)
