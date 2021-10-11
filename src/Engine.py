@@ -1,5 +1,5 @@
 from src.GameController import GameController
-from src.Difficulty import Difficulty
+from src.GameConsts import Difficulty
 
 class Engine:
  
