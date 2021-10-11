@@ -11,11 +11,11 @@ class BoardController:
         self._verticalNumbers = np.array([])
 
         self._board = np.array([
-            [Cell(True), Cell(True), Cell(True), Cell(True), Cell(True)], 
+            [Cell(True), Cell(False), Cell(True), Cell(True), Cell(True)], 
             [Cell(False), Cell(False), Cell(False), Cell(False), Cell(False)], 
-            [Cell(True), Cell(True), Cell(True), Cell(True), Cell(True)], 
-            [Cell(False), Cell(False), Cell(False), Cell(False), Cell(False)], 
-            [Cell(True), Cell(True), Cell(True), Cell(True), Cell(True)]
+            [Cell(True), Cell(False), Cell(True), Cell(True), Cell(True)], 
+            [Cell(False), Cell(False), Cell(True), Cell(False), Cell(False)], 
+            [Cell(True), Cell(False), Cell(True), Cell(True), Cell(True)]
         ])
 
     def import_board_image(self):
@@ -37,12 +37,14 @@ class BoardController:
                 if (self._board[j][i].get_value()):
                     num += 1
                     prev_val = True
-                    if (j == self._board.shape[0] - 1):
-                        nums.append(num)
                 else:
-                    nums.append(num)
+                    if prev_val:
+                        nums.append(num)
                     prev_val = False
                     num = 0
+            if num > 0:
+                nums.append(num)
             res.append(nums)
+        print(res)
             
         self._verticalNumbers = np.array(res)
