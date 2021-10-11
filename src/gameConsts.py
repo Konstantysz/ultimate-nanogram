@@ -12,3 +12,4 @@ class InputMode(Enum):
     HINT = 2
 
 LIVESNUMBER = 3
+BOARDFILEPATH = "./../resources/image.jpg"
